@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Font Awesome CDN -->
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <!--fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <!-- Custom style -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Dashboard</title>
+</head>
+
+<body>
+    <div class="d-flex flex-column h-100">
+        <!-- Start : Header -->
+        <header id="header" class="bg-white">
+            <div class="container">
+                <nav class="navbar d-flex justify-content-between align-items-center">
+                    <div class="d-flex align-items-center">
+                        <!-- Brand logo -->
+                        <a class="brandlogo" href="">
+                            <img src="../assets/images/scan.svg" class="brandimage" alt="Tally scan">
+                        </a>
+                        <a href="" class="brand-title ">Dashboard</a>
+                    </div>
+                    <div class="d-flex align-items-center">
+                        <span class="fa fa-bell icon "></span>
+                        <div class="dropdown">
+                            <button class="btn btn-dropdown">
+                                <figure class="user-icon">
+                                    <img src="../assets/images/Cristiano_Ronaldo_2018.jpg" class="brand-img"
+                                        alt="user profile image">
+                                </figure>
+                                <span class=""> John Smith</span>
+                                <span class="fa fa-caret-down icon "></span>
+                            </button>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </header>
+        <!-- End : Header -->
+        <div class="d-flex flex-grow-1 overflow-hidden">
+            <input type="checkbox" id="toggleSidebar">
+            <!-- Start : Sidebar -->
+            <aside class="sidebar bg-white">
+                <div>
+                    <h6>General</h6>
+                    <ul class="nav-list">
+                        <li class="nav-item">
+                            <a href="" class="nav-link">
+                                <span class="fa fa-search icon"></span>
+                                <span class="nav-text">Search</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="" class="nav-link">
+                                <span class="fa fa-bell icon"></span>
+                                <span class="nav-text">Alert</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="" class="nav-link">
+                                <span class="fa fa-tag icon"></span>
+                                <span class="nav-text">Tag</span>
+                            </a>
+                        </li>
+                    </ul>
+                    <h6>Others</h6>
+                    <ul class="nav-list">
+                        <li class="nav-item">
+                            <a href="" class="nav-link">
+                                <span class="fa fa-gear icon"></span>
+                                <span class="nav-text">Setting</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="" class="nav-link">
+                                <span class="fa fa-address-book icon"></span>
+                                <span class="nav-text">Tips</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="" class="nav-link">
+                                <span class="fa fa-trash icon"></span>
+                                <span class="nav-text">Trash</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="" class="nav-link">
+                                <span class="fa fa-sign-out icon"></span>
+                                <span class="nav-text">logout</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </aside>
+            <!-- End : Sidebar -->
+            <!-- Start : Main Content -->
+            <main id="main" class="d-flex flex-column flex-grow-1 overflow-auto">
+                <!-- Action Bar -->
+                <div class="d-flex justify-content-between align-items-center">
+                    <label class="icon fa fa-bars" for="toggleSidebar" title="Toggle Sidebar"></label>
+                    <button class="btn btn-primary filterbtn"> <span class="fa fa-filter"></span> Filter</button>
+                </div>
+                
+                <div class="flex-grow-1 overflow-vertical">
+
+                    <!-- Recent Activity -->
+                    <section class="recent-activity">
+                        <h5>Recent Activity</h5>
+                        <!-- searchbar -->
+
+                        <section class="table-wrapper">
+                            <!-- Table Header -->
+                            <div>
+                                <div class="text-align">
+                                    <!-- searchbar -->
+                                    <label for="searchbar">
+                                        <span class="fa fa-search icon"></span></label>
+                                    <input class="btn  " type="text" placeholder="search here" id="myInput">
+                                    <input class="btn" type="button" value="search" id="searchbar" onclick="filterUser()">
+                                </div>
+                                <table class="table-data">
+                                    <thead class="bg-white">
+                                        <tr>
+                                            <th class="item">Item <span class="fa fa-sort"></span></th>
+                                            <th class="date">Date <span class="fa fa-sort"></span></th>
+                                            <th class="type">Type</th>
+                                            <th class="est-cost">Est. Cost<span class="fa fa-sort"></span> </th>
+                                            <th class="last">Last<span class="fa fa-sort"></span> </th>
+                                            <th class="list">List<span class="fa fa-sort"></span> </th>
+                                            <th class="auto">Auto</th>
+                                            <th class="buy-now">Buy now</th>
+
+                                        </tr>
+                                    </thead>
+                                    <tbody id="tableData">
+                                        <!-- Data -->
+
+                                    </tbody>
+                                </table>
+                               <div class=" noRecord d-none"></div>
+                            </div>
+                        </section>
+                    </section>
+                </div>
+
+            </main>
+            <!-- End : Main Content -->
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

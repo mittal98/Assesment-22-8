@@ -1,0 +1,324 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%
+}
+
+body {
+    font-family: "Poppins", "sans-serif";
+    color: #212121;
+    background-color: #fafafa;
+    line-height: 1.6;
+}
+
+.bg-white {
+    background-color: #fff
+}
+
+.btn-primary {
+    background-color: #00b11c;
+    color: #FFFFFF;
+}
+
+.d-flex {
+    display: flex
+}
+
+.flex-column {
+    flex-direction: column
+}
+
+.justify-content-between {
+    justify-content: space-between
+}
+
+.justify-space-center {
+    justify-content: center
+}
+
+.align-items-center {
+    align-items: center
+}
+
+.flex-grow-1 {
+    flex-grow: 1
+}
+
+.h-100 {
+    height: 100%
+}
+
+.overflow-hidden {
+    overflow: hidden
+}
+.fa-sort {
+    margin-left: 4px;
+}
+
+.fa-bars {
+    margin-bottom: 20px;
+}
+
+.badge {
+    padding: 4px 10px;
+    border-radius: 20px;
+    background-color: #eee;
+}
+
+
+.filterbtn {
+    margin-bottom: 20px;
+    margin-left: auto;
+}
+
+.recent-activity h5 {
+    margin: 20px 0;
+}
+
+.container {
+    padding: 0 15px;
+    max-width: 100%
+}
+
+.brand-img {
+    max-width: 100%;
+    height: auto
+}
+.brandlogo{
+    height: 40px;
+    width: 40px;
+    overflow: hidden;
+}
+.brandimage{
+    max-width: 100%;
+    height: auto;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: #212121;
+    font-weight: 600
+}
+
+h5 {
+    font-size: 1.25rem
+}
+
+h6 {
+    font-size: 1rem
+}
+
+.btn {
+    display: inline-block;
+    font-weight: 400;
+    font-family: "Poppins", "sans-serif";
+    text-align: center;
+    border: 1px solid transparent;
+    font-size: 16px;
+    padding: 8px 15px;
+    border-radius: 4px;
+    transition: all .15s;
+    cursor: pointer;
+}
+
+
+.icon {
+    font-size: 1.25rem;
+    color: #757575;
+    transition: .25s all;
+    cursor: pointer;
+}
+
+.table-data {
+    border-collapse: separate;
+    width: 100%;
+    text-align: left;
+    border-bottom: 3px solid #fafafa;
+    border-spacing: 0 10px;
+}
+
+.table-data thead th {
+    padding: 1rem;
+    color: #757575;
+    font-weight: 400
+}
+
+
+
+.table-data tbody tr {
+    background-color: white;
+    border-radius: 4px
+}
+
+tbody tr td {
+    padding: 8px 16px;
+}
+
+tbody td img {
+    width: 20px;
+}
+
+tbody td:last-child img {
+    width: 100px;
+}
+
+
+.nav-list .nav-link {
+    display: flex;
+    align-items: center;
+    padding: 1rem 1.5rem;
+    border-left: 3px solid transparent;
+    -webkit-transition: .25s ease-in-out;
+    transition: .25s ease-in-out
+}
+
+.nav-list .nav-link:hover,
+.nav-list .nav-link.active {
+    border-color: #00b11c;
+    background-color: #e4ffe8
+}
+
+.nav-link:hover .icon,
+.nav-link:hover .nav-text,
+.nav-link.active .icon,
+.nav-link.active .nav-text {
+    color: #00b11c
+}
+
+.nav-list .nav-link .nav-text {
+    margin-left: 1.25rem;
+    text-transform: capitalize
+}
+
+#header {
+    padding: 1rem 0;
+    border-bottom: 1px solid #eee
+}
+
+#header .navbar-brand img {
+    width: 175px
+}
+
+#header .brand-title {
+    font-size: 1.25rem;
+    color: #212121;
+    font-weight: 600;
+    margin-left: 40px;
+}
+
+#header .dropdown {
+    position: relative
+}
+
+#header .dropdown .btn {
+    display: flex;
+    align-items: center;
+    font-weight: 500
+}
+
+#header .dropdown .user-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 10px;
+}
+
+.sidebar {
+    width: 230px;
+    flex: 0 0 230px;
+    transition: .35s ease-in-out
+}
+
+.sidebar h6 {
+    padding: 1rem 1.5rem;
+    text-transform: uppercase
+}
+
+.sidebar h6 {
+    margin-top: 16px;
+}
+#toggleSidebar {
+    display: none
+}
+
+#toggleSidebar:checked+.sidebar {
+    width: 0;
+    flex: 0 0 0;
+    transform: translateX(-300px)
+}
+
+
+#main {
+    padding: 1.5rem 2rem
+}
+
+.cursor-pointer {
+    cursor: pointer
+}
+
+.overflow-vertical {
+    overflow-x: hidden;
+    overflow-y: auto
+}
+
+.overflow-auto {
+    overflow: auto;
+}
+
+ul,
+ol,
+dl {
+    margin: 0;
+    padding: 0;
+    padding-left: 0;
+    list-style: none
+}
+
+figure {
+    margin: 0
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0
+}
+
+
+a {
+    text-decoration: none;
+    color: #757575
+}
+
+button {
+    background-color: transparent
+}
+.search-bar-wrapper ::placeholder {
+
+    color: #abb1be;
+    font-weight: 300;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+   
+}
+
+.d-none{
+    display: none;
+}
+.noRecord{
+   
+}
